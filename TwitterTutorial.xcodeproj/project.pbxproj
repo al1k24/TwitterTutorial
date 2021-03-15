@@ -19,6 +19,7 @@
 		440469DE25FFBAD100D09365 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440469DD25FFBAD100D09365 /* Extensions.swift */; };
 		440469E225FFD43600D09365 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440469E125FFD43600D09365 /* LoginController.swift */; };
 		440469E525FFD4B200D09365 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440469E425FFD4B200D09365 /* RegistrationController.swift */; };
+		440469E825FFE0B700D09365 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440469E725FFE0B700D09365 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		440469DD25FFBAD100D09365 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		440469E125FFD43600D09365 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		440469E425FFD4B200D09365 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		440469E725FFE0B700D09365 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				440469DD25FFBAD100D09365 /* Extensions.swift */,
+				440469E725FFE0B700D09365 /* Utilities.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			files = (
 				440469D425FFAF0F00D09365 /* NotificationsController.swift in Sources */,
 				440469D725FFAF3D00D09365 /* ConversationsController.swift in Sources */,
+				440469E825FFE0B700D09365 /* Utilities.swift in Sources */,
 				440469AA25FFAA6000D09365 /* AppDelegate.swift in Sources */,
 				440469DE25FFBAD100D09365 /* Extensions.swift in Sources */,
 				440469E225FFD43600D09365 /* LoginController.swift in Sources */,
