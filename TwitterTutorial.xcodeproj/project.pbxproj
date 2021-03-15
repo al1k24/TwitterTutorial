@@ -16,6 +16,7 @@
 		440469D125FFAEEE00D09365 /* ExploreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440469D025FFAEEE00D09365 /* ExploreController.swift */; };
 		440469D425FFAF0F00D09365 /* NotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440469D325FFAF0F00D09365 /* NotificationsController.swift */; };
 		440469D725FFAF3D00D09365 /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440469D625FFAF3D00D09365 /* ConversationsController.swift */; };
+		440469DE25FFBAD100D09365 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440469DD25FFBAD100D09365 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		440469D025FFAEEE00D09365 /* ExploreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreController.swift; sourceTree = "<group>"; };
 		440469D325FFAF0F00D09365 /* NotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsController.swift; sourceTree = "<group>"; };
 		440469D625FFAF3D00D09365 /* ConversationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
+		440469DD25FFBAD100D09365 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		440469BF25FFAAD200D09365 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				440469DD25FFBAD100D09365 /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				440469D425FFAF0F00D09365 /* NotificationsController.swift in Sources */,
 				440469D725FFAF3D00D09365 /* ConversationsController.swift in Sources */,
 				440469AA25FFAA6000D09365 /* AppDelegate.swift in Sources */,
+				440469DE25FFBAD100D09365 /* Extensions.swift in Sources */,
 				440469D125FFAEEE00D09365 /* ExploreController.swift in Sources */,
 				440469C825FFAB9900D09365 /* MainTabController.swift in Sources */,
 				440469AC25FFAA6000D09365 /* SceneDelegate.swift in Sources */,
