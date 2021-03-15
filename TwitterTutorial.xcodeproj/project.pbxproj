@@ -17,6 +17,8 @@
 		440469D425FFAF0F00D09365 /* NotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440469D325FFAF0F00D09365 /* NotificationsController.swift */; };
 		440469D725FFAF3D00D09365 /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440469D625FFAF3D00D09365 /* ConversationsController.swift */; };
 		440469DE25FFBAD100D09365 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440469DD25FFBAD100D09365 /* Extensions.swift */; };
+		440469E225FFD43600D09365 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440469E125FFD43600D09365 /* LoginController.swift */; };
+		440469E525FFD4B200D09365 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440469E425FFD4B200D09365 /* RegistrationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		440469D325FFAF0F00D09365 /* NotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsController.swift; sourceTree = "<group>"; };
 		440469D625FFAF3D00D09365 /* ConversationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
 		440469DD25FFBAD100D09365 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		440469E125FFD43600D09365 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		440469E425FFD4B200D09365 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 		440469C325FFAAF300D09365 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				440469E025FFD3F400D09365 /* Authentication */,
 				440469C725FFAB9900D09365 /* MainTabController.swift */,
 				440469CD25FFAEAB00D09365 /* FeedController.swift */,
 				440469D025FFAEEE00D09365 /* ExploreController.swift */,
@@ -125,6 +130,15 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		440469E025FFD3F400D09365 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				440469E125FFD43600D09365 /* LoginController.swift */,
+				440469E425FFD4B200D09365 /* RegistrationController.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,9 +214,11 @@
 				440469D725FFAF3D00D09365 /* ConversationsController.swift in Sources */,
 				440469AA25FFAA6000D09365 /* AppDelegate.swift in Sources */,
 				440469DE25FFBAD100D09365 /* Extensions.swift in Sources */,
+				440469E225FFD43600D09365 /* LoginController.swift in Sources */,
 				440469D125FFAEEE00D09365 /* ExploreController.swift in Sources */,
 				440469C825FFAB9900D09365 /* MainTabController.swift in Sources */,
 				440469AC25FFAA6000D09365 /* SceneDelegate.swift in Sources */,
+				440469E525FFD4B200D09365 /* RegistrationController.swift in Sources */,
 				440469CE25FFAEAB00D09365 /* FeedController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
