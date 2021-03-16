@@ -11,6 +11,9 @@ import UIKit
 class RegistrationController: UIViewController {
     
     //MARK: - Properties
+    private let imagePicker = UIImagePickerController()
+    
+    
     private let plusPtohoButton: UIButton = {
         let button = UIButton(type: .system)
         let image = #imageLiteral(resourceName: "plus_photo")
@@ -95,7 +98,7 @@ class RegistrationController: UIViewController {
     
     //MARK: - Selectors
     @objc func plusPtohoButtonTapped() {
-        print(#function)
+        present(imagePicker, animated: true, completion: nil)
     }
     
     @objc func registrationButtonTapped() {
@@ -109,6 +112,9 @@ class RegistrationController: UIViewController {
     //MARK: - Helpers
     func configureUI() {
         view.backgroundColor = .twitterBlue
+        
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = true
         
         view.addSubview(plusPtohoButton)
         plusPtohoButton.centerX(inView: view, topAnchor: view.safeAreaLayoutGuide.topAnchor)
@@ -127,5 +133,27 @@ class RegistrationController: UIViewController {
         
         view.addSubview(alreadyHaveAccountButton)
         alreadyHaveAccountButton.anchor(left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, paddingLeft: 40, paddingRight: 16)
+    }
+}
+
+//MARK: - UINavigationControllerDelegate
+extension RegistrationController: UINavigationControllerDelegate {}
+
+//MARK: - UIImagePickerControllerDelegate
+extension RegistrationController: UIImagePickerControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let profileImage = info[.editedImage] as? UIImage else { return }
+        
+        plusPtohoButton.layer.cornerRadius = 128 / 2
+        plusPtohoButton.layer.masksToBounds = true
+        plusPtohoButton.imageView?.contentMode = .scaleAspectFill
+        plusPtohoButton.imageView?.clipsToBounds = true
+        plusPtohoButton.layer.borderColor = UIColor.white.cgColor
+        plusPtohoButton.layer.borderWidth = 3
+        
+        self.plusPtohoButton.setImage(profileImage.withRenderingMode(.alwaysOriginal), for: .normal)
+        
+        dismiss(animated: true, completion: nil)
     }
 }
