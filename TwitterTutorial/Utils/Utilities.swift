@@ -17,17 +17,20 @@ class Utilities {
         imageView.image = image
         view.addSubview(imageView)
         
-        imageView.anchor(left: view.leftAnchor, bottom: view.bottomAnchor, paddingLeft: 8, paddingBottom: 8)
+        imageView.anchor(left: view.leftAnchor, bottom: view.bottomAnchor,
+                         paddingLeft: 8, paddingBottom: 8)
         imageView.setDimensions(width: 24, height: 24)
         
         view.addSubview(textField)
-        textField.anchor(left: imageView.rightAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingLeft: 8, paddingBottom: 8)
+        textField.anchor(left: imageView.rightAnchor, bottom: view.bottomAnchor, right: view.rightAnchor,
+                         paddingLeft: 8, paddingBottom: 8)
         
         let dividerView = UIView()
         dividerView.backgroundColor = .white
         view.addSubview(dividerView)
         
-        dividerView.anchor(left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingLeft: 8, height: 0.75)
+        dividerView.anchor(left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor,
+                           paddingLeft: 8, height: 0.75)
         
         return view
     }
@@ -40,5 +43,22 @@ class Utilities {
             NSAttributedString.Key.foregroundColor: UIColor.white
         ])
         return textField
+    }
+    
+    func attributedButton(_ firstPart: String, _ secondPard: String) -> UIButton {
+        let button = UIButton(type: .system)
+        
+        let attributedTitle = NSMutableAttributedString(string: firstPart, attributes: [
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16),
+            NSAttributedString.Key.foregroundColor: UIColor.white
+        ])
+        attributedTitle.append(NSMutableAttributedString(string: secondPard, attributes: [
+            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16),
+            NSAttributedString.Key.foregroundColor: UIColor.white
+        ]))
+        
+        button.setAttributedTitle(attributedTitle, for: .normal)
+        
+        return button
     }
 }
