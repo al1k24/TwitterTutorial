@@ -13,6 +13,7 @@ class RegistrationController: UIViewController {
     
     //MARK: - Properties
     private let imagePicker = UIImagePickerController()
+    private var profileImage: UIImage?
     
     private let plusPtohoButton: UIButton = {
         let button = UIButton(type: .system)
@@ -102,8 +103,14 @@ class RegistrationController: UIViewController {
     }
     
     @objc func registrationButtonTapped() {
+        guard let profileImage = profileImage else {
+            print("* DEBUG: Please select a profile image...")
+            return
+        }
         guard let email = emailTextField.text else { return }
         guard let password = passwordTextField.text else { return }
+        guard let fullName = fullNameTextField.text else { return }
+        guard let userName = userNameTextField.text else { return }
         
         Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
             if let error = error {
@@ -111,7 +118,17 @@ class RegistrationController: UIViewController {
                 return
             }
             
-            print("* DEBUG: Success !")
+            guard let uid = result?.user.uid else { return }
+            let values = [
+                "email": email,
+                "userName": userName,
+                "fullName": fullName
+            ]
+            
+            let ref = Database.database().reference().child("users").child(uid)
+            ref.updateChildValues(values) { (error, reference) in
+                print("OK")
+            }
         }
     }
     
@@ -154,6 +171,7 @@ extension RegistrationController: UIImagePickerControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let profileImage = info[.editedImage] as? UIImage else { return }
+        self.profileImage = profileImage
         
         plusPtohoButton.layer.cornerRadius = 128 / 2
         plusPtohoButton.layer.masksToBounds = true
