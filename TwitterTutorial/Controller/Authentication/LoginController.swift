@@ -60,6 +60,8 @@ class LoginController: UIViewController {
     }()
     
     //MARK: - Lifecycle
+    deinit { print("* LoginController - deinit") }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -72,7 +74,8 @@ class LoginController: UIViewController {
     }
     
     @objc func dontHaveAccountButtonTapped() {
-        print(#function)
+        let controller = RegistrationController()
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     //MARK: - Helpers
