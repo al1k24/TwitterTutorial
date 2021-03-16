@@ -118,7 +118,12 @@ class RegistrationController: UIViewController {
                                           profileImage: profileImage)
         
         AuthService.shared.registerUser(credentials: credentials) { (error, reference) in
-            print(#function)
+            guard let window = UIWindow.key else { return }
+            guard let tab = window.rootViewController as? MainTabController else { return }
+            
+            tab.authenticateUserAndConfigureUI()
+            
+            self.dismiss(animated: true, completion: nil)
         }
     }
     
