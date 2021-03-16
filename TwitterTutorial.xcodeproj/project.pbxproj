@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,7 @@
 		440469E525FFD4B200D09365 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440469E425FFD4B200D09365 /* RegistrationController.swift */; };
 		440469E825FFE0B700D09365 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440469E725FFE0B700D09365 /* Utilities.swift */; };
 		44046A272600CA7D00D09365 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44046A262600CA7D00D09365 /* GoogleService-Info.plist */; };
+		44046A4B2600DB0500D09365 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44046A4A2600DB0500D09365 /* Constants.swift */; };
 		7BE578ABFA186D332E765D74 /* Pods_TwitterTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3DBF51CAAC60DD3EA070FF /* Pods_TwitterTutorial.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		440469E425FFD4B200D09365 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		440469E725FFE0B700D09365 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		44046A262600CA7D00D09365 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		44046A4A2600DB0500D09365 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8D3DBF51CAAC60DD3EA070FF /* Pods_TwitterTutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterTutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3C22FE30BD93A9A7B4BABDB /* Pods-TwitterTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterTutorial.release.xcconfig"; path = "Target Support Files/Pods-TwitterTutorial/Pods-TwitterTutorial.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,7 +66,6 @@
 				07A5F37D496128E0D45674EB /* Pods-TwitterTutorial.debug.xcconfig */,
 				E3C22FE30BD93A9A7B4BABDB /* Pods-TwitterTutorial.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -110,6 +111,7 @@
 			children = (
 				440469DD25FFBAD100D09365 /* Extensions.swift */,
 				440469E725FFE0B700D09365 /* Utilities.swift */,
+				44046A4A2600DB0500D09365 /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -297,6 +299,7 @@
 				440469AC25FFAA6000D09365 /* SceneDelegate.swift in Sources */,
 				440469E525FFD4B200D09365 /* RegistrationController.swift in Sources */,
 				440469CE25FFAEAB00D09365 /* FeedController.swift in Sources */,
+				44046A4B2600DB0500D09365 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

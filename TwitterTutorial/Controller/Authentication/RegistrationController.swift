@@ -66,7 +66,6 @@ class RegistrationController: UIViewController {
     
     private let userNameTextField: UITextField = {
         let textField = Utilities().textField(withPlaceholder: "User Name")
-        textField.isSecureTextEntry = true
         return textField
     }()
     
@@ -112,22 +111,32 @@ class RegistrationController: UIViewController {
         guard let fullName = fullNameTextField.text else { return }
         guard let userName = userNameTextField.text else { return }
         
-        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
-            if let error = error {
-                print("* DEBUG: Error is \(error.localizedDescription)")
-                return
-            }
-            
-            guard let uid = result?.user.uid else { return }
-            let values = [
-                "email": email,
-                "userName": userName,
-                "fullName": fullName
-            ]
-            
-            let ref = Database.database().reference().child("users").child(uid)
-            ref.updateChildValues(values) { (error, reference) in
-                print("OK")
+        guard let imageData = profileImage.jpegData(compressionQuality: 0.3) else { return }
+        let fileName = NSUUID().uuidString
+        let storageRef = STORAGE_PROFILE_IMAGES.child(fileName)
+        
+        storageRef.putData(imageData, metadata: nil) { (meta, error) in
+            storageRef.downloadURL { (url, error) in
+                guard let profileImageUrl = url?.absoluteString else { return }
+                
+                Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+                    if let error = error {
+                        print("* DEBUG: Error is \(error.localizedDescription)")
+                        return
+                    }
+                    
+                    guard let uid = result?.user.uid else { return }
+                    let values = [
+                        "email": email,
+                        "userName": userName,
+                        "fullName": fullName,
+                        "profileImageUrl": profileImageUrl
+                    ]
+                    
+                    REF_USERS.child(uid).updateChildValues(values) { (error, reference) in
+                        print("OK")
+                    }
+                }
             }
         }
     }
