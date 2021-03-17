@@ -38,6 +38,8 @@ class UploadTweetController: UIViewController {
         return imageView
     }()
     
+    private let captionTextView = CaptionTextView()
+    
     //MARK: - Lifecycle
     deinit { print("* UploadTweetController - deinit") }
     
@@ -74,9 +76,16 @@ class UploadTweetController: UIViewController {
         
         configureNavigationBar()
         
-        view.addSubview(profileImageView)
-        profileImageView.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor,
-                                paddingTop: 16, paddingLeft: 16)
+//        captionTextView.heightAnchor.constraint(equalToConstant: 300).isActive = true
+//        heightAnchor.constraint(equalToConstant: 300).isActive = true
+        
+        let stack = UIStackView(arrangedSubviews: [profileImageView, captionTextView])
+        stack.axis = .horizontal
+        stack.spacing = 12
+        
+        view.addSubview(stack)
+        stack.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, right: view.rightAnchor,
+                     paddingTop: 16, paddingLeft: 16, paddingRight: 16)
         
         profileImageView.sd_setImage(with: user.profileImageUrl, completed: nil)
     }
