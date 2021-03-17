@@ -1,0 +1,25 @@
+//
+//  User.swift
+//  TwitterTutorial
+//
+//  Created by Алик on 17.03.2021.
+//
+
+import Foundation
+
+struct User {
+    let uid: String
+    let email: String
+    let fullName: String
+    let userName: String
+    let profileImageUrl: String
+    
+    init(uid: String, dictionary: [String: AnyObject]) {
+        self.uid = uid
+        
+        self.email = dictionary["email"] as? String ?? ""
+        self.fullName = dictionary["fullName"] as? String ?? ""
+        self.userName = dictionary["userName"] as? String ?? ""
+        self.profileImageUrl = dictionary["profileImageUrl"] as? String ?? ""
+    }
+}

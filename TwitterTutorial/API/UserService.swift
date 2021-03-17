@@ -16,12 +16,10 @@ struct UserService {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         
         REF_USERS.child(uid).observeSingleEvent(of: .value) { (snapshot) in
-            print("* DEBUG: Snapshot us \(snapshot)")
-            
             guard let dictionary = snapshot.value as? [String: AnyObject] else { return }
-            guard let userName = dictionary["userName"] as? String else { return }
-            
-            print("* DEBUG: UserName is \(userName)")
+
+            let user = User(uid: uid, dictionary: dictionary)
+            print("* DEBUG: UserName is \(user.userName)")
         }
     }
 }
