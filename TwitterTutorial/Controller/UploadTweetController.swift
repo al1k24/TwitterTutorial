@@ -10,6 +10,8 @@ import UIKit
 class UploadTweetController: UIViewController {
     
     //MARK: - Properties
+    private var user: User
+    
     private lazy var actionButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = .twitterBlue
@@ -26,8 +28,28 @@ class UploadTweetController: UIViewController {
         return button
     }()
     
+    private let profileImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleToFill
+        imageView.clipsToBounds = true
+        imageView.setDimensions(width: 48, height: 48)
+        imageView.layer.cornerRadius = 48 / 2
+        imageView.backgroundColor = .twitterBlue
+        return imageView
+    }()
+    
     //MARK: - Lifecycle
     deinit { print("* UploadTweetController - deinit") }
+    
+    init(user: User) {
+        self.user = user
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +72,16 @@ class UploadTweetController: UIViewController {
     func configureUI() {
         view.backgroundColor = .white
         
+        configureNavigationBar()
+        
+        view.addSubview(profileImageView)
+        profileImageView.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor,
+                                paddingTop: 16, paddingLeft: 16)
+        
+        profileImageView.sd_setImage(with: user.profileImageUrl, completed: nil)
+    }
+    
+    func configureNavigationBar() {
         navigationController?.navigationBar.barTintColor = .white
         navigationController?.navigationBar.isTranslucent = false
         
