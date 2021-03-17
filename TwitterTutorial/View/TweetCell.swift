@@ -10,6 +10,12 @@ import UIKit
 class TweetCell: UICollectionViewCell {
     
     //MARK: - Properties
+    var tweet: Tweet? {
+        didSet {
+            configure()
+        }
+    }
+    
     private let profileImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleToFill
@@ -24,7 +30,7 @@ class TweetCell: UICollectionViewCell {
         let label = UILabel()
         label.font = .systemFont(ofSize: 14)
         label.numberOfLines = 0
-        label.text = "tomara"
+        label.text = "..."
         return label
     }()
     
@@ -85,7 +91,7 @@ class TweetCell: UICollectionViewCell {
         stack.anchor(top: profileImageView.topAnchor, left: profileImageView.rightAnchor, right: rightAnchor, paddingLeft: 12, paddingRight: 12)
         
         infoLabel.font = .systemFont(ofSize: 14)
-        infoLabel.text = "GGGG GGG @test"
+        infoLabel.text = "..."
         
         let actionStack = UIStackView(arrangedSubviews: [
             commentButton, retweetButton, likeButton, shareButton
@@ -127,4 +133,9 @@ class TweetCell: UICollectionViewCell {
     }
     
     //MARK: - Helpers
+    func configure() {
+        guard let tweet = tweet else { return }
+        
+        captionLabel.text = tweet.caption
+    }
 }
