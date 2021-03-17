@@ -36,7 +36,7 @@ struct TweetService {
             let tweet = Tweet(tweetID: tweetID, dictionary: dictionary)
             
             tweets.append(tweet)
-            completion(tweets)
+            completion(tweets) //Баг - Каждый раз получаем все твиты + 1
         }
     }
 }
