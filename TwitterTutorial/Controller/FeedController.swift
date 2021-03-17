@@ -22,6 +22,14 @@ class FeedController: UIViewController {
         super .viewDidLoad()
         
         congigureUI()
+        fetchTweets()
+    }
+    
+    //MARK: - API
+    func fetchTweets() {
+        TweetService.shared.fetchTweets { (tweets) in
+            print("* DEBUG: Tweets are \(tweets)")
+        }
     }
     
     //MARK: - Helpers

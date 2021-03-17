@@ -28,6 +28,7 @@
 		44046A7A2602188600D09365 /* UploadTweetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44046A792602188600D09365 /* UploadTweetController.swift */; };
 		44046A7D2602546E00D09365 /* CaptionTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44046A7C2602546E00D09365 /* CaptionTextView.swift */; };
 		44046A9226025EC000D09365 /* TweetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44046A9126025EBF00D09365 /* TweetService.swift */; };
+		44046A95260262A000D09365 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44046A94260262A000D09365 /* Tweet.swift */; };
 		7BE578ABFA186D332E765D74 /* Pods_TwitterTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3DBF51CAAC60DD3EA070FF /* Pods_TwitterTutorial.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		44046A792602188600D09365 /* UploadTweetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetController.swift; sourceTree = "<group>"; };
 		44046A7C2602546E00D09365 /* CaptionTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionTextView.swift; sourceTree = "<group>"; };
 		44046A9126025EBF00D09365 /* TweetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetService.swift; sourceTree = "<group>"; };
+		44046A94260262A000D09365 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		8D3DBF51CAAC60DD3EA070FF /* Pods_TwitterTutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterTutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3C22FE30BD93A9A7B4BABDB /* Pods-TwitterTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterTutorial.release.xcconfig"; path = "Target Support Files/Pods-TwitterTutorial/Pods-TwitterTutorial.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				44046A5326020ADD00D09365 /* User.swift */,
+				44046A94260262A000D09365 /* Tweet.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				440469E525FFD4B200D09365 /* RegistrationController.swift in Sources */,
 				440469CE25FFAEAB00D09365 /* FeedController.swift in Sources */,
 				44046A4B2600DB0500D09365 /* Constants.swift in Sources */,
+				44046A95260262A000D09365 /* Tweet.swift in Sources */,
 				44046A9226025EC000D09365 /* TweetService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
