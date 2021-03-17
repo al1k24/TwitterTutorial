@@ -23,6 +23,7 @@
 		44046A272600CA7D00D09365 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44046A262600CA7D00D09365 /* GoogleService-Info.plist */; };
 		44046A4B2600DB0500D09365 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44046A4A2600DB0500D09365 /* Constants.swift */; };
 		44046A4E2601225E00D09365 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44046A4D2601225E00D09365 /* AuthService.swift */; };
+		44046A512602062D00D09365 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44046A502602062D00D09365 /* UserService.swift */; };
 		7BE578ABFA186D332E765D74 /* Pods_TwitterTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3DBF51CAAC60DD3EA070FF /* Pods_TwitterTutorial.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		44046A262600CA7D00D09365 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		44046A4A2600DB0500D09365 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		44046A4D2601225E00D09365 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		44046A502602062D00D09365 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		8D3DBF51CAAC60DD3EA070FF /* Pods_TwitterTutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterTutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3C22FE30BD93A9A7B4BABDB /* Pods-TwitterTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterTutorial.release.xcconfig"; path = "Target Support Files/Pods-TwitterTutorial/Pods-TwitterTutorial.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				44046A4D2601225E00D09365 /* AuthService.swift */,
+				44046A502602062D00D09365 /* UserService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44046A512602062D00D09365 /* UserService.swift in Sources */,
 				440469D425FFAF0F00D09365 /* NotificationsController.swift in Sources */,
 				440469D725FFAF3D00D09365 /* ConversationsController.swift in Sources */,
 				440469E825FFE0B700D09365 /* Utilities.swift in Sources */,
