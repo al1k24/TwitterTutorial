@@ -23,7 +23,7 @@ class UploadTweetController: UIViewController {
         button.frame = CGRect(x: 0, y: 0, width: 64, height: 32)
         button.layer.cornerRadius = 32 / 2
         
-        button.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(uploadTweetButtonTapped), for: .touchUpInside)
         
         return button
     }()
@@ -64,8 +64,18 @@ class UploadTweetController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    @objc func actionButtonTapped() {
-        print(#function)
+    //Баг - Если быстро нажать кнопку, то делается 2 твита
+    @objc func uploadTweetButtonTapped() {
+        guard let caption = captionTextView.text else { return }
+        
+        TweetService.shared.uploadTweet(caption: caption) { (error, reference) in
+            if let error = error {
+                print("* DEBUG: Failed to upload tweet with error \(error.localizedDescription)")
+                return
+            }
+            
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     //MARK: - API
