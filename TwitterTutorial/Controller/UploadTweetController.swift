@@ -86,9 +86,6 @@ class UploadTweetController: UIViewController {
         
         configureNavigationBar()
         
-//        captionTextView.heightAnchor.constraint(equalToConstant: 300).isActive = true
-//        heightAnchor.constraint(equalToConstant: 300).isActive = true
-        
         let stack = UIStackView(arrangedSubviews: [profileImageView, captionTextView])
         stack.axis = .horizontal
         stack.spacing = 12

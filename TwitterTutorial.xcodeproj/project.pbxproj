@@ -32,6 +32,7 @@
 		44046A98260268B600D09365 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44046A97260268B600D09365 /* TweetCell.swift */; };
 		446897C426028D20009696A7 /* TweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446897C326028D20009696A7 /* TweetViewModel.swift */; };
 		44B5F74626497ED800BEB691 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B5F74526497ED800BEB691 /* ProfileController.swift */; };
+		44B5F749264991A800BEB691 /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B5F748264991A800BEB691 /* ProfileHeader.swift */; };
 		7BE578ABFA186D332E765D74 /* Pods_TwitterTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3DBF51CAAC60DD3EA070FF /* Pods_TwitterTutorial.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		44046A97260268B600D09365 /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		446897C326028D20009696A7 /* TweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetViewModel.swift; sourceTree = "<group>"; };
 		44B5F74526497ED800BEB691 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		44B5F748264991A800BEB691 /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
 		8D3DBF51CAAC60DD3EA070FF /* Pods_TwitterTutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterTutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3C22FE30BD93A9A7B4BABDB /* Pods-TwitterTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterTutorial.release.xcconfig"; path = "Target Support Files/Pods-TwitterTutorial/Pods-TwitterTutorial.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,6 +176,7 @@
 			children = (
 				44046A7C2602546E00D09365 /* CaptionTextView.swift */,
 				44046A97260268B600D09365 /* TweetCell.swift */,
+				44B5F748264991A800BEB691 /* ProfileHeader.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				440469AA25FFAA6000D09365 /* AppDelegate.swift in Sources */,
 				440469DE25FFBAD100D09365 /* Extensions.swift in Sources */,
 				44B5F74626497ED800BEB691 /* ProfileController.swift in Sources */,
+				44B5F749264991A800BEB691 /* ProfileHeader.swift in Sources */,
 				44046A98260268B600D09365 /* TweetCell.swift in Sources */,
 				440469E225FFD43600D09365 /* LoginController.swift in Sources */,
 				44046A4E2601225E00D09365 /* AuthService.swift in Sources */,
