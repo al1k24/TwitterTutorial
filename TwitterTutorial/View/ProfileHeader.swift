@@ -112,7 +112,8 @@ class ProfileHeader: UICollectionReusableView {
         filterBar.anchor(left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, height: 50)
         
         addSubview(underlineView)
-        underlineView.anchor(left: leftAnchor, bottom: bottomAnchor, width: frame.width / 3, height: 2)
+        let itemsCount = CGFloat(ProfileFilterOptions.allCases.count)
+        underlineView.anchor(left: leftAnchor, bottom: bottomAnchor, width: frame.width / itemsCount, height: 2)
     }
     
     required init?(coder: NSCoder) {
