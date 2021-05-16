@@ -7,8 +7,9 @@
 
 import UIKit
 
-protocol ProfileHeaderDelegate: class {
+protocol ProfileHeaderDelegate: AnyObject {
     func handleDismissal()
+    func hadnleEditProfileFollow(_ header: ProfileHeader)
 }
 
 class ProfileHeader: UICollectionReusableView {
@@ -165,7 +166,7 @@ class ProfileHeader: UICollectionReusableView {
     }
     
     @objc private func handleEditProfileFollow() {
-        
+        delegate?.hadnleEditProfileFollow(self)
     }
     
     @objc private func handleFollowersTapped() {
