@@ -116,7 +116,11 @@ extension ProfileController: UICollectionViewDelegateFlowLayout {
 }
 
 extension ProfileController: ProfileHeaderDelegate {
-    func hadnleEditProfileFollow(_ header: ProfileHeader) {        
+    func hadnleEditProfileFollow(_ header: ProfileHeader) {
+        if user.isCurrentUser {
+            return
+        }
+        
         if user.isFollowed {
             UserService.shared.unfollowUser(uid: user.uid) { [weak self] (error, ref) in
                 self?.user.isFollowed = false
