@@ -38,9 +38,17 @@ struct ProfileHeaderViewModel {
     var actionButtonTitle: String {
         if user.isCurrentUser {
             return "Edit Profile"
-        } else {
-            return "Follow"
         }
+        
+        if !user.isFollowed && !user.isCurrentUser {
+            return "Following"
+        }
+        
+        if user.isFollowed {
+            return "Following"
+        }
+        
+        return "Loading"
     }
     
     init(user: User) {
