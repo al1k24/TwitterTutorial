@@ -45,7 +45,7 @@ class TweetController: UICollectionViewController {
 }
 
 extension TweetController {
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 3
     }
     
